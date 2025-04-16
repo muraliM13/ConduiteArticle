@@ -17,3 +17,9 @@ Given User Should be on Article Page
 When User enters edit Article details
 |Murali2|Descrypt|Content1|Tag2|
 Then Article must be edited and created
+
+
+Scenario: Delete an Article
+Given User Should be on Article delete Page
+When User enters delete Article details
+Then Article must be deleted

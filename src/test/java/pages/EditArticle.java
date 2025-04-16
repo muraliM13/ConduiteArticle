@@ -15,7 +15,7 @@ import base.TestBase;
 public class EditArticle {
 	
 	//@FindBy(xpath ="//div[@class='article-actions']//a[@class='nav-link']//i[@class='ion-edit'] and contains(.,'Edit Article')")
-	@FindBy(xpath = "//a[@href='#/editor/murali1']")
+	@FindBy(xpath = "//a[@href='#/editor/murali3']")
 	WebElement editArticle;
 	//@FindBy(xpath ="//button[@class='btn btn-sm' and index(.,' Edit Article']")
 	//WebElement editArticle;
@@ -45,7 +45,7 @@ public class EditArticle {
 	WebElement ArticlePub;
 	//
 	//@FindBy(xpath = "//a[@class='preview-link' and contains(.,'Murali3')]")
-	@FindBy(xpath = "//a[@href='#/article/murali3']")
+	@FindBy(xpath = "//*[@href='#/article/murali3']")
 	WebElement ArticleName;
 	@FindBy(xpath = "//button[@class='nav-link ' and contains(.,'Global Feed')]")
 	WebElement Articles;
@@ -53,10 +53,13 @@ public class EditArticle {
 	WebElement myArticles;
 	@FindBy(xpath = "//a[@href='#/profile/Murali']")
 	WebElement myProfile;
-	
+	//@FindBy(xpath = "//button[@class='btn btn-sm' and contains(text(),' Delete Article')]")
+	@FindBy(xpath = "//div[@class='ion-trash-a'and contains(text(),' Delete Article']")
+	//@FindBy (linkText="Delete Article")
+	WebElement delArticles;
 	
 
-	WebDriver driver;
+	//WebDriver driver;
 	public EditArticle(WebDriver driver){
 		PageFactory.initElements(driver, this);
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
@@ -85,8 +88,18 @@ public class EditArticle {
 		ArticleName.click();
 	}
 	public void FindArticle() {	
-		JavascriptExecutor js = (JavascriptExecutor)driver; 
-		js.executeScript("window.scrollBy(100, document.body.scrollHeight)");
+//		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+//		JavascriptExecutor js = (JavascriptExecutor)driver; 
+//		js.executeScript("window.scrollBy(100, document.body.scrollHeight)");
+//		
 		ArticleName.click();
 	}
+	public void deleteArticle() {	
+//		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+//		JavascriptExecutor js = (JavascriptExecutor)driver; 
+//		js.executeScript("window.scrollBy(100, document.body.scrollHeight)");
+//		
+		delArticles.click();
+	}
+
 }

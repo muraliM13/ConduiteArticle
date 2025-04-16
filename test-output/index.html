@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Administrator\AppData\Local\Temp\testng-eclipse-440823728\testng-customsuite.xml</span>
+                    <span>C:\Users\Administrator\AppData\Local\Temp\testng-eclipse--1876161213\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                    <span class="method-stats">4 methods, 2 failed,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -106,6 +106,11 @@
                         <a href="#" panel-name="suite-Default_suite" title="runners.CreateArticleRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Edit an Article&quot;, &quot;Create an Article&quot;)">runScenario("Edit an Article", "Create an Article")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="runners.CreateArticleRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Delete an Article&quot;, &quot;Create an Article&quot;)">runScenario("Delete an Article", "Create an Article")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                   <li>
@@ -117,12 +122,12 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="runners.CreateArticleRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Create an Article&quot;, &quot;Create an Article&quot;)">runScenario("Create an Article", "Create an Article")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="runners.CreateArticleRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Login into App&quot;, &quot;Create an Article&quot;)">runScenario("Login into App", "Create an Article")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="runners.CreateArticleRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Login into App&quot;, &quot;Create an Article&quot;)">runScenario("Login into App", "Create an Article")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="runners.CreateArticleRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Create an Article&quot;, &quot;Create an Article&quot;)">runScenario("Create an Article", "Create an Article")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -149,15 +154,15 @@
                   </a> <!-- runScenario("Edit an Article", "Create an Article") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Edit an Article","Create an Article")</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@href=&apos;#/editor/murali1&apos;]&quot;}
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@href=&apos;#/article/murali3&apos;]&quot;}
   (Session info: chrome=135.0.7049.85)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [8f72660c0f50e16b96334b144c3d6daa, findElement {value=//a[@href=&apos;#/editor/murali1&apos;], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.95 (de2eb485a195..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65421}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65421/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8f72660c0f50e16b96334b144c3d6daa
+Command: [9cc367b9f6e2996f044d38e7be8405e3, findElement {using=xpath, value=//*[@href=&apos;#/article/murali3&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.95 (de2eb485a195..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52264}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52264/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9cc367b9f6e2996f044d38e7be8405e3
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -177,9 +182,53 @@ Session ID: 8f72660c0f50e16b96334b144c3d6daa
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at jdk.proxy2/jdk.proxy2.$Proxy25.click(Unknown Source)
-	at pages.EditArticle.EditArticle(EditArticle.java:74)
-	at stepDefs.CreateArticleStepDef.user_enters_edit_atricle_details(CreateArticleStepDef.java:76)
-	at ✽.User enters edit Article details(file:///C:/workspace/ConduitArticleSample/./src/test/resources/features/createArticle.feature:17)
+	at pages.EditArticle.FindArticle(EditArticle.java:95)
+	at stepDefs.CreateArticleStepDef.user_should_be_on_article_page(CreateArticleStepDef.java:66)
+	at ✽.User Should be on Article Page(file:///C:/workspace/ConduitArticleSample/./src/test/resources/features/createArticle.feature:16)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Delete an Article&quot;, &quot;Create an Article&quot;)">
+                  </a> <!-- runScenario("Delete an Article", "Create an Article") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Delete an Article","Create an Article")</span>
+                  <div class="stack-trace">org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression //div[@class=&apos;ion-trash-a&apos;and contains(text(),&apos; Delete Article&apos;] because of the following error:
+SyntaxError: Failed to execute &apos;evaluate&apos; on &apos;Document&apos;: The string &apos;//div[@class=&apos;ion-trash-a&apos;and contains(text(),&apos; Delete Article&apos;]&apos; is not a valid XPath expression.
+  (Session info: chrome=135.0.7049.85)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9cc367b9f6e2996f044d38e7be8405e3, findElement {using=xpath, value=//div[@class=&apos;ion-trash-a&apos;and contains(text(),&apos; Delete Article&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.95 (de2eb485a195..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52264}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52264/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9cc367b9f6e2996f044d38e7be8405e3
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy25.click(Unknown Source)
+	at pages.EditArticle.deleteArticle(EditArticle.java:102)
+	at stepDefs.CreateArticleStepDef.user_should_be_on_article_delete_page(CreateArticleStepDef.java:86)
+	at ✽.User Should be on Article delete Page(file:///C:/workspace/ConduitArticleSample/./src/test/resources/features/createArticle.feature:23)
 
 </div> <!-- stack-trace -->
                   <em>
@@ -196,20 +245,20 @@ Session ID: 8f72660c0f50e16b96334b144c3d6daa
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Create an Article&quot;, &quot;Create an Article&quot;)">
-                  </a> <!-- runScenario("Create an Article", "Create an Article") -->
+                  <a name="runScenario(&quot;Login into App&quot;, &quot;Create an Article&quot;)">
+                  </a> <!-- runScenario("Login into App", "Create an Article") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Create an Article","Create an Article")</span>
+                  <span class="parameters">("Login into App","Create an Article")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Login into App&quot;, &quot;Create an Article&quot;)">
-                  </a> <!-- runScenario("Login into App", "Create an Article") -->
+                  <a name="runScenario(&quot;Create an Article&quot;, &quot;Create an Article&quot;)">
+                  </a> <!-- runScenario("Create an Article", "Create an Article") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Login into App","Create an Article")</span>
+                  <span class="parameters">("Create an Article","Create an Article")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -219,7 +268,7 @@ Session ID: 8f72660c0f50e16b96334b144c3d6daa
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Administrator\AppData\Local\Temp\testng-eclipse-440823728\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Administrator\AppData\Local\Temp\testng-eclipse--1876161213\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -276,19 +325,23 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'runners.CreateArticleRunner')
-data.setCell(0, 3, 1853);
+data.setCell(0, 3, 1841);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'runners.CreateArticleRunner')
-data.setCell(1, 3, 1257);
+data.setCell(1, 3, 1144);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'runScenario')
 data.setCell(2, 2, 'runners.CreateArticleRunner')
-data.setCell(2, 3, 638);
+data.setCell(2, 3, 135);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'runScenario')
+data.setCell(3, 2, 'runners.CreateArticleRunner')
+data.setCell(3, 3, 104);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -321,26 +374,32 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">runners.CreateArticleRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@2f2bff16)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@1b956cfa)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">runScenario("Login into App", "Create an Article")</span>
-                <span class="method-start">3713 ms</span>
+                <span class="method-start">2927 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Create an Article", "Create an Article")</span>
-                <span class="method-start">5574 ms</span>
+                <span class="method-start">4774 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">runScenario("Edit an Article", "Create an Article")</span>
-                <span class="method-start">6834 ms</span>
+                <span class="method-start">5921 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Delete an Article", "Create an Article")</span>
+                <span class="method-start">6033 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">7485 ms</span>
+                <span class="method-start">6181 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

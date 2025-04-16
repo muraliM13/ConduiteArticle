@@ -61,10 +61,11 @@ public class CreateArticleStepDef {
 	}
 	@Given("User Should be on Article Page")
 	public void user_should_be_on_article_page() {
-		TestBase.openUrl("https://conduit-realworld-example-app.fly.dev/");
+		TestBase.openUrl("https://conduit-realworld-example-app.fly.dev/#/profile/Murali");//"https://conduit-realworld-example-app.fly.dev/");
 		//editarticle.ViewArticle();
-		//editarticle.FindArticle();
+		editarticle.FindArticle();
 		//editarticle.EditArticle();
+		editarticle.deleteArticle();
 	}
 	@When("User enters edit Article details")
 	public void user_enters_edit_atricle_details(DataTable usrData) {
@@ -77,8 +78,14 @@ public class CreateArticleStepDef {
 	}
 	@Then("Article must be edited and created")
 	public void article_must_be_edited_and_created() {
-		
 	}
+	
+	@Given("User Should be on Article delete Page")
+	public void user_should_be_on_article_delete_page() {
+		TestBase.openUrl("https://conduit-realworld-example-app.fly.dev/#/article/murali3");
+		editarticle.deleteArticle();
+	}
+	
 	
 //	@After
 //	public void attachScreen(Scenario scenario) {
