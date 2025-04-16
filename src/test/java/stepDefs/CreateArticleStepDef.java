@@ -84,16 +84,16 @@ public class CreateArticleStepDef {
 	public void user_should_be_on_article_delete_page() {
 		TestBase.openUrl("https://conduit-realworld-example-app.fly.dev/#/article/murali3");
 		editarticle.deleteArticle();
+	}	
+	@After
+	public void attachScreen(Scenario scenario) {
+		if(scenario.isFailed()) {
+			TakesScreenshot screen = (TakesScreenshot)driver;
+			byte[] img = screen.getScreenshotAs(OutputType.BYTES);
+			scenario.attach(img,"image/png","FailedScenarioImage");
+		}
 	}
 	
 	
-//	@After
-//	public void attachScreen(Scenario scenario) {
-//		if(scenario.isFailed()) {
-//			TakesScreenshot screen = (TakesScreenshot)driver;
-//			byte[] img = screen.getScreenshotAs(OutputType.BYTES);
-//			scenario.attach(img,"image/png","FailedScenarioImage");
-//		}
-//	}
 
 }
