@@ -9,20 +9,23 @@ import org.testng.annotations.Test;
 
 public class ConduitLogin {
 	WebDriver driver;
+	@FindBy(xpath = "//a[text()='Login']")
+	WebElement btnLogin;
 	@FindBy(name = "email")
 	WebElement userId;
 	@FindBy(name = "password")
 	WebElement pwd;
-	@FindBy(xpath = "//button[@class='btn btn-lg btn-primary pull-xs-right']")
-	WebElement btnLogin;
+	@FindBy(xpath = "//button[text()='Login']")
+	WebElement LoginBtn;
 	
 	public ConduitLogin(WebDriver driver) {
 	  PageFactory.initElements(driver, this);
 	}
   //Actions
 	public void LoginIntoApp(String strUser, String strPwd) {		
+		btnLogin.click();	
 		userId.sendKeys(strUser);
 		pwd.sendKeys(strPwd);
-	 	btnLogin.click();	  
+		LoginBtn.click();
   }
 }

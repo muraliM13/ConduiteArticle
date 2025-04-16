@@ -18,7 +18,9 @@ public class CreateArticle {
 	//@FindBy(xpath = "//i[@class='ion-compose']")
 	//@FindBy(css = "#/editor")
 	//@FindBy(linkText = "New Article")
-	@FindBy(xpath = "//a[@class='nav-link ' and contains(.,'New Article')]")
+	//@FindBy(xpath = "//*[text()='New Article']")
+	@FindBy(xpath = "//a[@href='#/editor']")
+	//@FindBy(xpath = "//a[@class='nav-link ' and contains(.,'New Article')]")
 	WebElement newArticle;
 	@FindBy(css = "input[name='title']")
 	WebElement ArticleTitle;

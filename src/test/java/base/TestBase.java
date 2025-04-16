@@ -1,5 +1,6 @@
 package base;
 
+import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
@@ -8,11 +9,14 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.Test;
 
+
 public class TestBase{
 	
 	private static TestBase testBase;
 	private static WebDriver driver;
-	private TestBase() {
+	
+	private TestBase(){
+	//	String browserName = Utils.getConfigProperties("browserName");
 	String strBrowser = "chrome";
 	ChromeOptions options = new ChromeOptions();
 	options.addArguments("--incognito");

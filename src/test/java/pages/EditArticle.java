@@ -14,7 +14,8 @@ import base.TestBase;
 
 public class EditArticle {
 	
-	@FindBy(xpath ="//div[@class='article-actions']//a[@class='nav-link']//i[@class='ion-edit'] and contains(.,'Edit Article')")
+	//@FindBy(xpath ="//div[@class='article-actions']//a[@class='nav-link']//i[@class='ion-edit'] and contains(.,'Edit Article')")
+	@FindBy(xpath = "//a[@href='#/editor/murali1']")
 	WebElement editArticle;
 	//@FindBy(xpath ="//button[@class='btn btn-sm' and index(.,' Edit Article']")
 	//WebElement editArticle;
@@ -29,7 +30,8 @@ public class EditArticle {
 	
 	//public By editArticle = By.xpath("//div[@class='article-actions']//a[@class='nav-link']//i[@class='ion-edit'] and contains(.,'Edit Article')");
 	
-	@FindBy(xpath = "//i[@class='ion-compose' and contains(.,'Home')]")
+	//@FindBy(xpath = "//i[@class='ion-compose' and contains(.,'Home')]")
+	@FindBy(xpath = "//a[@aria-current='page']")
 	WebElement homebtn;
 	@FindBy(css = "input[name='title']")
 	WebElement ArticleTitle;
@@ -41,39 +43,34 @@ public class EditArticle {
 	WebElement ArticleTag;
 	@FindBy(css = "button[type='submit']")
 	WebElement ArticlePub;
-	
-	@FindBy(xpath = "//a[@class='preview-link' and contains(.,'MuraliAtricle1')]")
+	//
+	//@FindBy(xpath = "//a[@class='preview-link' and contains(.,'Murali3')]")
+	@FindBy(xpath = "//a[@href='#/article/murali3']")
 	WebElement ArticleName;
-	@FindBy(linkText = "Global Feed")
+	@FindBy(xpath = "//button[@class='nav-link ' and contains(.,'Global Feed')]")
 	WebElement Articles;
 	@FindBy(xpath = "//img[@alt='Murali']")
 	WebElement myArticles;
-	//@FindBy(xpath = "//div[@class='dropdown-menu'] and contains(text(),'Profile']")
-	@FindBy(xpath = "//a[@class='author'] and contains(.,'Murali']")
+	@FindBy(xpath = "//a[@href='#/profile/Murali']")
 	WebElement myProfile;
 	
-
 	
+
+	WebDriver driver;
 	public EditArticle(WebDriver driver){
 		PageFactory.initElements(driver, this);
-		//driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+		
 		}
 	@BeforeTest
-	public void setup() throws InterruptedException {
-		TestBase.openUrl("https://conduit-realworld-example-app.fly.dev/#/profile/Murali");
-		Thread.sleep(5000);
+	public void setup() {
+		TestBase.openUrl("https://conduit-realworld-example-app.fly.dev/#/article/murali");
+		
+		//Thread.sleep(5000);
 	}
-//	@BeforeTest
-//	public void setup() throws InterruptedException {
-//		TestBase.openUrl("https://conduit-realworld-example-app.fly.dev/#/login");
-//		loginPage.LoginIntoApp("murali123.muluka@gmail.com", "AyaanSri@143#");
-//		Thread.sleep(5000);
-//	}
+
 	//Actions
 	public void EditArticle(String strTitle, String strDescrpt, String strBody, String strTag) {// throws InterruptedException{	
-		//myArticles.click();
-		myProfile.click();
-		ArticleName.click();
 		editArticle.click();
 		ArticleTitle.sendKeys(strTitle);
 		ArticleDescrpt.sendKeys(strDescrpt);
@@ -83,8 +80,13 @@ public class EditArticle {
 		
   }
 	public void ViewArticle() {// throws InterruptedException{	
-		homebtn.click();
-		Articles.click();
+		myArticles.click();
+		myProfile.click();
+		ArticleName.click();
+	}
+	public void FindArticle() {	
+		JavascriptExecutor js = (JavascriptExecutor)driver; 
+		js.executeScript("window.scrollBy(100, document.body.scrollHeight)");
 		ArticleName.click();
 	}
 }

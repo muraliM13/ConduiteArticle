@@ -3,12 +3,17 @@ https://conduit-realworld-example-app.fly.dev/#/
 
 Scenario: Login into App
 Given User is on Login Page
-When User provides "murali123.muluka@gmail.com" and "AyaanSri@13#"
-Then User Should be on Home Page
+When User provides "murali123.muluka@gmail.com" and "AyaanSri@143#"
+Then User should be on Home Page
 
-Scenario: Create New Article
-Given User Should be on New Article Page
+Scenario: Create an Article
+Given User Should be on login Page
 When User enters Article details
-|Title|Desc|Content|Tag|
-|Article1|Article1_data|Hi this is 1st Article|1St Article|
+|Murali3|Desc|Content|Tag1|
 Then Article must be created
+
+Scenario: Edit an Article
+Given User Should be on Article Page
+When User enters edit Article details
+|Murali2|Descrypt|Content1|Tag2|
+Then Article must be edited and created

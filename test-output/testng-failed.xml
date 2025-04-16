@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestScripts.CreateArticleTest">
+      <class name="runners.CreateArticleRunner">
         <methods>
-          <include name="setup"/>
-          <include name="editArticle"/>
+          <include name="setUpClass"/>
+          <include name="tearDownClass"/>
+          <include name="runScenario" invocation-numbers="2"/>
         </methods>
-      </class> <!-- TestScripts.CreateArticleTest -->
+      </class> <!-- runners.CreateArticleRunner -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
